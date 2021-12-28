@@ -32,7 +32,7 @@ contract Lottery{
             participants.push(msg.sender);
         }
 
-        // does lottery for every 10 people and send prize to winner 
+        // does lottery for every 10 peoples and send prize to winner 
         if ( numberOfParticipaits == 10 ) {
             payable(participants[randMod(participants.length)]).transfer(address(this).balance) ;
 
